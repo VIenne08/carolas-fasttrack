@@ -50,8 +50,28 @@
     .bekannt{padding:18px 0 44px;border-bottom:1px solid var(--line)} .bekannt-inner{display:flex;flex-direction:column;align-items:center;gap:20px} .bekannt-label{font-size:15px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:var(--ink);white-space:nowrap} .bekannt-logos{display:flex;align-items:center;gap:60px;flex-wrap:wrap;justify-content:center} .logo-item{opacity:.8;transition:.2s;height:44px;width:auto;object-fit:contain;mix-blend-mode:multiply} .logo-item:hover{opacity:1}
     .cta-band{padding:80px 0;display:grid;grid-template-columns:1fr auto;gap:32px;align-items:center;color:#fff} .cta-band h2{color:#fff;font-size:clamp(32px,4vw,54px)} .cta-band p{color:rgba(255,255,255,.8);margin-top:12px;max-width:850px} .cta-band .btn{background:#fff;color:#c4503d;transition:.3s cubic-bezier(.34,1.56,.64,1);white-space:nowrap} .cta-band .btn:hover{transform:translateY(-4px) scale(1.04);box-shadow:0 16px 40px rgba(0,0,0,.18)}
     .faq{max-width:900px;margin:48px auto 0;display:grid;gap:12px} details{background:var(--white);border:1px solid var(--line);border-radius:20px;padding:0 24px} summary{list-style:none;cursor:pointer;padding:22px 0;font-weight:800;color:var(--ink);display:flex;justify-content:space-between;gap:20px} summary::-webkit-details-marker{display:none} summary:after{content:"+";font-family:var(--display);font-size:28px;color:var(--gold);line-height:1} details[open] summary:after{content:"–"} details p{padding:0 0 22px;font-size:15px;text-align:left}
-    footer{background:#174f4c;color:rgba(255,255,255,.72);padding:46px 0;font-size:13px} footer .wrap{display:grid;grid-template-columns:1fr auto;gap:26px;align-items:start} footer a{color:rgba(255,255,255,.72);text-decoration:none;margin-left:18px} .disclaimer{grid-column:1/-1;color:rgba(255,255,255,.48);font-size:12px;max-width:900px;line-height:1.6}
-    @media (max-width:980px){.navlinks{display:none} .hero-grid,.split,.split.reverse,.library,.team-cards,.community-showcase,.transformation,.cta-band,footer .wrap{grid-template-columns:1fr} .hero-img{height:520px} .hero-card{left:18px;right:18px;bottom:18px} .card-grid,.testimonial-grid{grid-template-columns:1fr 1fr} .modules{grid-template-columns:1fr 1fr} .included{grid-template-columns:1fr 1fr} .trust-grid{grid-template-columns:1fr} .section{padding:78px 0} .program-head{display:block}}
+    footer{background:#174f4c;color:rgba(255,255,255,.72);padding:64px 0 40px;font-size:13px}
+    .footer-grid{display:grid;grid-template-columns:1fr 220px;gap:64px;align-items:start}
+    .footer-brand{font-family:var(--display);font-size:clamp(28px,4vw,52px);font-weight:700;color:#fff;letter-spacing:-.03em;line-height:1;margin-bottom:10px}
+    .footer-tagline{color:rgba(255,255,255,.6);font-size:14px;margin-bottom:28px}
+    .footer-form{display:grid;gap:10px;margin-bottom:28px}
+    .footer-form input,.footer-form textarea{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);border-radius:10px;padding:12px 14px;color:#fff;font-size:14px;font-family:var(--body);outline:none;transition:.2s}
+    .footer-form input::placeholder,.footer-form textarea::placeholder{color:rgba(255,255,255,.4)}
+    .footer-form input:focus,.footer-form textarea:focus{border-color:rgba(255,255,255,.35);background:rgba(255,255,255,.12)}
+    .footer-form textarea{resize:vertical;min-height:90px}
+    .footer-form .footer-row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+    .footer-form button{justify-self:start;background:var(--coral);color:#fff;border:none;border-radius:999px;padding:12px 26px;font-size:13px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;cursor:pointer;transition:.25s}
+    .footer-form button:hover{background:#d44e3a;transform:translateY(-2px)}
+    .footer-social{display:flex;gap:10px;margin-top:4px}
+    .footer-social a{display:grid;place-items:center;width:38px;height:38px;border-radius:50%;background:rgba(255,255,255,.1);transition:.2s}
+    .footer-social a:hover{background:rgba(255,255,255,.2)}
+    .footer-social svg{width:16px;height:16px;fill:var(--coral)}
+    .footer-nav{display:flex;flex-direction:column;align-items:flex-end;gap:14px;padding-top:80px}
+    .footer-nav a{color:rgba(255,255,255,.72);text-decoration:none;font-size:14px;transition:.2s}
+    .footer-nav a:hover{color:#fff}
+    .footer-bottom{grid-column:1/-1;border-top:1px solid rgba(255,255,255,.1);margin-top:0px;padding-top:16px;display:flex;justify-content:space-between;align-items:center;font-size:12px;color:rgba(255,255,255,.4)}
+    .disclaimer{color:rgba(255,255,255,.4);font-size:12px;max-width:100%;white-space:nowrap;line-height:1.6}
+    @media (max-width:980px){.navlinks{display:none} .hero-grid,.split,.split.reverse,.library,.team-cards,.community-showcase,.transformation,.cta-band,footer .wrap{grid-template-columns:1fr} .hero-img{height:520px} .hero-card{left:18px;right:18px;bottom:18px} .card-grid,.testimonial-grid{grid-template-columns:1fr 1fr} .modules{grid-template-columns:1fr 1fr} .included{grid-template-columns:1fr 1fr} .trust-grid{grid-template-columns:1fr} .section{padding:78px 0} .program-head{display:block} .footer-grid{grid-template-columns:1fr} .footer-nav{align-items:flex-start} .footer-bottom{flex-direction:column;gap:8px}}
     @media (max-width:640px){.wrap{width:min(92vw,520px)} .nav-inner{height:68px} .nav .btn{display:none} .hero{padding-top:38px} .hero-facts,.card-grid,.testimonial-grid,.modules,.included,.proof-images{grid-template-columns:1fr} h1{font-size:46px} h2{font-size:36px} .hero-img{height:420px;border-radius:28px} .hero-card{position:relative;left:auto;right:auto;bottom:auto;margin-top:18px} .image-frame img,.image-frame.soft img,.person img,.device img{height:auto;max-height:500px} .stamp{width:120px;height:120px;font-size:17px;right:14px} .cta-band{padding:34px 24px;border-radius:26px} .btn{width:100%}}
   </style>
 </head>
@@ -240,7 +260,35 @@
   </section>
 
   <footer>
-    <div class="wrap"><div><strong>Carola's Fasttrack</strong><br>Klarheit für dein Geld. Ruhe für dein Leben.</div><div><a href="https://carolaferstl.de/impressum/" target="_blank">Impressum</a><a href="https://carolaferstl.de/datenschutz/" target="_blank">Datenschutz</a></div><p class="disclaimer">Hinweis: Dieses Angebot dient der finanziellen Bildung und ersetzt keine individuelle Anlage-, Steuer- oder Rechtsberatung. Investitionen am Kapitalmarkt sind mit Risiken verbunden.</p></div>
+    <div class="wrap">
+      <div class="footer-grid">
+        <!-- Left -->
+        <div>
+          <div class="footer-brand">Carola's Fasttrack</div>
+          <p class="footer-tagline">Klarheit für dein Geld. Ruhe für dein Leben.</p>
+<div class="footer-social">
+            <!-- Instagram -->
+            <a href="https://www.instagram.com/carolaferstl/" target="_blank" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.17.054 1.97.24 2.43.403a4.9 4.9 0 011.77 1.152 4.9 4.9 0 011.152 1.77c.163.46.35 1.26.403 2.43.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.054 1.17-.24 1.97-.403 2.43a4.9 4.9 0 01-1.152 1.77 4.9 4.9 0 01-1.77 1.152c-.46.163-1.26.35-2.43.403-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.17-.054-1.97-.24-2.43-.403a4.9 4.9 0 01-1.77-1.152 4.9 4.9 0 01-1.152-1.77c-.163-.46-.35-1.26-.403-2.43C2.175 15.584 2.163 15.204 2.163 12s.012-3.584.07-4.85c.054-1.17.24-1.97.403-2.43A4.9 4.9 0 013.788 2.95a4.9 4.9 0 011.77-1.152c.46-.163 1.26-.35 2.43-.403C9.416 2.175 9.796 2.163 12 2.163zm0-2.163C8.756 0 8.332.014 7.052.072 5.775.13 4.9.333 4.14.63a7.07 7.07 0 00-2.55 1.66A7.07 7.07 0 00.63 4.14C.333 4.9.13 5.775.072 7.052.014 8.332 0 8.756 0 12c0 3.244.014 3.668.072 4.948.058 1.277.261 2.152.558 2.912a7.07 7.07 0 001.66 2.55 7.07 7.07 0 002.55 1.66c.76.297 1.635.5 2.912.558C8.332 23.986 8.756 24 12 24s3.668-.014 4.948-.072c1.277-.058 2.152-.261 2.912-.558a7.07 7.07 0 002.55-1.66 7.07 7.07 0 001.66-2.55c.297-.76.5-1.635.558-2.912.058-1.28.072-1.704.072-4.948s-.014-3.668-.072-4.948c-.058-1.277-.261-2.152-.558-2.912a7.07 7.07 0 00-1.66-2.55A7.07 7.07 0 0019.86.63C19.1.333 18.225.13 16.948.072 15.668.014 15.244 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a>
+            <!-- Twitter/X -->
+            <a href="https://twitter.com/carolaferstl" target="_blank" aria-label="Twitter"><svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+            <!-- YouTube -->
+            <a href="https://www.youtube.com/@CarolaFerstl" target="_blank" aria-label="YouTube"><svg viewBox="0 0 24 24"><path d="M23.495 6.205a3.007 3.007 0 00-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 00.527 6.205a31.247 31.247 0 00-.522 5.805 31.247 31.247 0 00.522 5.783 3.007 3.007 0 002.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 002.088-2.088 31.247 31.247 0 00.5-5.783 31.247 31.247 0 00-.5-5.805zM9.609 15.601V8.408l6.264 3.602z"/></svg></a>
+            <!-- LinkedIn -->
+            <a href="https://www.linkedin.com/in/carola-ferstl-37a50539/" target="_blank" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+          </div>
+        </div>
+        <!-- Right -->
+        <div class="footer-nav">
+          <a href="https://carolaferstl.de/impressum/" target="_blank">Impressum</a>
+          <a href="https://carolaferstl.de/datenschutz/" target="_blank">Datenschutz</a>
+        </div>
+        <!-- Bottom -->
+        <div class="footer-bottom">
+          <span class="disclaimer">Hinweis: Dieses Angebot dient der finanziellen Bildung und ersetzt keine individuelle Anlage-, Steuer- oder Rechtsberatung.</span>
+          <span>Copyright © 2026</span>
+        </div>
+      </div>
+    </div>
   </footer>
 </body>
 </html>
